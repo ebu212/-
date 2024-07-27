@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Attendance Tracker</h1>
+        <form id="studentForm">
+            <input type="text" id="studentName" placeholder="Enter student name" required>
+            <button type="submit">Add Student</button>
+        </form>
+
+        <table id="attendanceTable">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Attendance</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Student rows will be dynamically added here -->
+            </tbody>
+        </table>
+
+        <div id="summary">
+            <p>Total Students: <span id="totalStudents">0</span></p>
+            <p>Total Days: <span id="totalDays">0</span></p>
+        </div>
+
+        <button id="generateReport">Generate Monthly Report</button>
+    </div>
+
+    <!-- Modal for Monthly Report -->
+    <div id="reportModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Monthly Report</h2>
+            <table id="monthlyReportTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Present</th>
+                        <th>Absent</th>
+                        <th>Excused</th>
+                        <th>Total Recorded</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Report rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Company Name</p>
+    </footer>
+</body>
+</html>
